@@ -1,9 +1,17 @@
 {
-  "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "vite",
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "visatk-temp-mail",
+  "main": "worker/index.ts",
   "compatibility_date": "2026-02-16",
-  "assets": {
-    "not_found_handling": "single-page-application"
+  "compatibility_flags": ["nodejs_compat"], // Required for postal-mime
+  "observability": {
+    "enabled": true
   },
-  "main": "./worker/index.ts"
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "temp-mail-db",
+      "database_id": "YOUR_GENERATED_DATABASE_ID" // Paste ID here
+    }
+  ]
 }
