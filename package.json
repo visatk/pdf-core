@@ -1,13 +1,14 @@
 {
-  "name": "vite-app",
+  "name": "tempmail",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "deploy": "wrangler types && npm run build && wrangler deploy",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "npm run build && vite preview"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
