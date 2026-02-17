@@ -1,10 +1,10 @@
-import { PDFSession, Env } from "./pdf-session";
+import { PDFSession, type Env } from "./pdf-session"; // Added 'type' keyword
 
 // Export the class so Cloudflare can find it
 export { PDFSession };
 
 export default {
-  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+  async fetch(request: Request, env: Env, _ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
     // 1. CORS Preflight (Crucial for frontend fetching)
