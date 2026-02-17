@@ -15,8 +15,8 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "temp-mail",
-      "database_id": "YOUR_GENERATED_DATABASE_ID" // Paste ID here
+      "database_name": "viteapp",
+      "database_id": "9909fa7a-c277-4b38-96bf-b97a8008dece" // Paste ID here
     }
   ]
 }
