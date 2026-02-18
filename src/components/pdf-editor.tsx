@@ -365,7 +365,7 @@ export function PdfEditor() {
                              width={window.innerWidth > 768 ? 600 : window.innerWidth * 0.9} 
                              renderTextLayer={true} // Enable Text Layer for Editing
                              renderAnnotationLayer={false}
-                             onLoadSuccess={(page) => {
+                             onLoadSuccess={(_page) => {
                                  // We could store page dimensions here if needed
                              }}
                              onClick={(e) => {
