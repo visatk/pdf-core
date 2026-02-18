@@ -4,7 +4,7 @@ import { extractText, getDocumentProxy } from "unpdf";
 // Re-defining interface here to avoid build dependency issues between worker/app
 export interface PdfAnnotation {
 	id: string;
-	type: "text" | "rect" | "image" | "path";
+	type: "text" | "rect" | "image" | "path" | "text-replace";
 	page: number;
 	x: number;
 	y: number;
@@ -16,6 +16,7 @@ export interface PdfAnnotation {
     image?: string;
     path?: string;
     strokeWidth?: number;
+    originalTextRect?: { x: number; y: number; width: number; height: number };
 }
 
 export type WSMessage =
